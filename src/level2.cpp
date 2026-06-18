@@ -168,7 +168,7 @@ void init_level_2() {
     pipes[p++] = {z4_x + 180.0f, 24.0f, 0, 0, 0, 8, 4, true, 0}; plants[pl++] = {z4_x + 181.0f, 20.0f, 0, -0.5f, 0, 6, 6, true, 0};
     pipes[p++] = {z4_x + 300.0f, 24.0f, 0, 0, 0, 8, 4, true, 0}; plants[pl++] = {z4_x + 301.0f, 20.0f, 0, -0.4f, 0, 6, 6, true, 0};
     
-    pipes[p++] = {z4_x + 420.0f, 24.0f, 0, 0, 0, 8, 4, true, 100}; // Sortie vers désert
+    pipes[p++] = {z4_x + 420.0f, 24.0f, 0, 0, 0, 8, 4, true, 1800}; // Sortie vers désert
 
     for(int i=0; i<6; i++) {
         turtles[t++] = {z4_x + 80.0f + (i * 90.0f), 24.0f, -0.4f, 0, 0, 4, 4, true, 10}; 
@@ -177,7 +177,7 @@ void init_level_2() {
     
     flyers[f++] = {z4_x + 100.0f, 12.0f, -0.6f, 0, 12.0f, 4, 4, true, 0};
     flyers[f++] = {z4_x + 220.0f, 16.0f, -0.9f, 0, 16.0f, 4, 4, true, 0};
-    flyers[f++] = {z4_x + 340.0f, 10.0f, -0.7f, 0, 10.0f, 4, 4, true, 0};
+    flyers[f++] = {z4_x + 340.0f, 10.0f, -0.7f, 0, 10.0f, 4, 4, true, 0}; 
 
     blocks[56] = {z4_x + 120.0f, 0.0f, 0, 0, 0, 12, 16, true, 1}; dyn_objs[56] = {z4_x + 120.0f, 0.0f, z4_x + 120.0f, 0.0f, 0, 0, true};
     blocks[57] = {z4_x + 380.0f, 0.0f, 0, 0, 0, 12, 16, true, 1}; dyn_objs[57] = {z4_x + 380.0f, 0.0f, z4_x + 380.0f, 0.0f, 0, 0, true};

@@ -18,15 +18,18 @@ float get_ground_y_level1(float world_x) {
 }
 
 float get_ceiling_y_level1(float world_x) {
+    // 🌟 CORRECTION : Le plafond est abaissé uniquement dans la Grotte Secrète !
     if (world_x >= 3100.0f && world_x <= 4000.0f) return 6.0f; 
-    return 0.0f; 
+    
+    // Ciel ouvert pour le reste du niveau
+    return -50.0f;  
 }
 
 // =========================================================================
 // 2. INITIALISATION AVEC LES BLOCS 5x5 AJUSTÉS
 // =========================================================================
 void init_level_1() {
-    WORLD_W = 4000; flag = {1840.0f, 10.0f, 0, 0, 0, 1, 18, true, 0};             
+    WORLD_W = 4000; flag = {1840.0f, 10.0f, 0, 0, 0, 1, 18, true, 0};            
     ground_r = false; ground_g = true; ground_b = false; // Vert Plein Air
     int b=0, c=0, t=0, p=0, pl=0, fb=0, bc=0, f=0; 
     
@@ -93,7 +96,7 @@ void init_level_1() {
         coins[c++] = {3150.0f + (i*20.0f), 11.0f + wave, 0, 0, 0, 4, 4, true, 0};
     }
     
-    // 🌟 CORRECTION DE HAUTEUR : Les blocs sont remontés à Y=9.0f
+    // Les blocs sont remontés à Y=9.0f
     // Le Grand Mario (Taille = 8) passe sans aucun problème sous la marge !
     blocks[b++] = {3350.0f, 9.0f, 0, 0, 0, 5, 5, true, 1}; // 🍄
     blocks[b++] = {3500.0f, 9.0f, 0, 0, 0, 5, 5, true, 1}; // 🍄 
